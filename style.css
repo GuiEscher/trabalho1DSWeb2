@@ -1,0 +1,168 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #f8f4ff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #a37ddc;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2A2D54;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2A2D54;
+}
+
+/* Estilos da seção principal */
+.main-banner {
+    position: relative;
+    text-align: center;
+    color: #2A2D54;
+}
+
+.main-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banner-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2A2D54;
+}
+
+.banner-content button {
+    background-color: #a37ddc;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-content button:hover {
+    background-color: #926B96;
+}
+
+/* Estilos da página de login */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #926B96;
+}
+
+.login-card {
+    background-color: #f8f4ff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 300px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.login-card h2 {
+    color: #2A2D54;
+    margin-bottom: 20px;
+}
+
+.login-card label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2A2D54;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.login-card button {
+    width: 100%;
+    background-color: #a37ddc;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.login-card .google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #2A2D54;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.login-card .google-login img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.login-image img {
+    max-width: 400px;
+    border-radius: 10px;
+}
