@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
+
+/* Configurações globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #f8f4ff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #a37ddc;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2A2D54;
+    text-decoration: none; 
+}
+
+.logout{
+    color: #995577;
+    border: #995577;
+    border-radius: 12px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2A2D54;
+}
+
+.main {
+    background-color: #926B96;
+    min-height: 100vh; 
+    height: auto; 
+    padding-bottom: 16px;
+}
+
+.content {
+    background-color: #FAFAFA;
+    margin: 32px;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.return-button {
+    text-decoration: none; /* Remove qualquer sublinhado ou decoração do link */
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+
+.details-sections {
+    display: flex; /* Divide o conteúdo em colunas */
+    flex-wrap: wrap; /* Permite que o conteúdo quebre para a próxima linha */
+    justify-content: space-between; /* Espaçamento uniforme entre os elementos */
+    width: 100%; /* Preenche toda a largura disponível */
+    gap: 16px; /* Espaço entre as colunas */
+    border-radius: 12px; /* Bordas arredondadas */
+    background-color: #E7D7E9; /* Cor de fundo */
+    margin-bottom: 32px;
+}
+
+.details-div {
+    flex: 1; /* Colunas com tamanho igual */
+    min-width: 200px; /* Define um tamanho mínimo para as colunas */
+    align-items: center; /* Centraliza verticalmente dentro das colunas */
+    padding: 32px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: 600; /* Peso da fonte */
+    overflow: hidden; /* Impede que o conteúdo transborde */
+}
+
+.details-sections > div:last-child {
+    display: flex; /* Torna o elemento um container flex */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna (opcional para texto) */
+    font-size: 24px;
+    padding: 0%;
+}
+
+.details-p {
+    width: 100%; /* Garante que os parágrafos não ultrapassem a largura disponível */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+    padding: 16px; /* Padding para o espaçamento interno */
+    overflow-wrap: break-word; /* Quebra as palavras longas para evitar transbordamento */
+    word-wrap: break-word; /* Compatibilidade para garantir quebra de palavras em navegadores antigos */
+    word-break: break-word; /* Quebra palavras longas em linhas */
+}
+
+.walker-image {
+    width: 100%; /* A imagem ocupará no máximo 100% da largura disponível */
+    max-width: 200px; /* Define a largura máxima da imagem */
+    height: auto; /* Ajusta a altura de forma proporcional */
+    max-height: 200px;
+    border-radius: 50%; /* Faz a imagem ficar circular */
+    object-fit: cover; /* Garante que a imagem fique proporcional e preencha o espaço */
+    display: block; /* Para centralização com margin auto */
+}
+
+
+.details-buttons {
+    display: grid; /* Usa grid layout para organizar os botões */
+    grid-template-columns: repeat(3, 1fr); /* Divide em 3 colunas de tamanho igual */
+    gap: 16px; /* Espaçamento entre os botões */
+    padding: 16px; /* Espaçamento interno do contêiner */
+    justify-content: center; /* Centraliza o grid horizontalmente */
+}
+
+.details-button {
+    flex: 0 0 60%; /* Cada botão ocupa 60% do espaço disponível da linha */
+    padding: 10px 20px; /* Tamanho interno do botão */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito para o texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none; /* Remove a borda padrão */
+    background-color: #926B96; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Cursor de clique */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.details-button-cancel {
+    flex: 0 0 60%; /* Cada botão ocupa 60% do espaço disponível da linha */
+    padding: 10px 20px; /* Tamanho interno do botão */
+    font-size: 16px; /* Tamanho do texto */
+    font-weight: bold; /* Negrito para o texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none; /* Remove a borda padrão */
+    background-color: #995577; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Cursor de clique */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+.details-button:hover {
+    background-color: #834866; /* Cor de fundo ao passar o mouse */
+}
+
+@media screen and (max-width: 600px) {
+    .details-buttons {
+        grid-template-columns: 1fr; /* Tornar todas as colunas em uma única coluna */
+    }
+    .walker-image {margin-bottom: 32px;}
+
+}
+
+@media screen and (max-width: 500px) {
+    .site-name {
+        display: none; /* Oculta o nome do site */
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .selected-tab {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passeio em execução</title>
+    <link rel="stylesheet" href="/dashboard/css/in_execution.css">
+    <!-- Adicionar o CSS do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="main">
+        <!-- Cabeçalho -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="../assets/logo.png" alt="GoodDog Passeios">
+                    <a href="/index.html" class="site-name">GoodDog Passeios</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="/dashboard/next_walks.html">Seus passeios</a></li>
+                    <li><a class="logout" href="/index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Conteúdo principal -->
+        <div class="content">
+            
+            <div class="details">
+                <div class="walk-details">
+                    <a href="/dashboard/previous_walks.html" class="return-button">< Voltar</a>
+
+                    <h1>Detalhes do passeio</h1>
+                    <p>Nome do Cachorro: Jubileu</p>
+                    <p>Características: Pastor alemão, agitado</p>
+                    <p>Data: 28/11/2024</p>
+                    <p>Horário de Início: 18:00</p>
+                    <p>Horário para término: 19:00</p>
+                    <p>Passeador: Jurandir</p>
+                    <p>Distância solicitada: 4km</p>
+                    <p>Valor: RS 60,00</p>
+                </div>
+
+                <div class="details-buttons">
+                    <a href="#message" class="details-button">Enviar mensagem</a>
+                    <a href="#problem_report" class="details-button">Reportar problema</a>
+                </div>
+
+            </div>
+
+            <!-- Div para o mapa -->
+            <div id="mapid"></div>
+
+        </div>
+    </div>
+
+    <script>
+        // Inicializando o mapa com o Leaflet
+        var mymap = L.map('mapid').setView([51.505, -0.09], 13); // Defina as coordenadas padrão (inicial)
+        
+        // Adicionando o layer do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(mymap);
+
+        // Função para obter a localização atual
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocalização não é suportada por este navegador.");
+            }
+        }
+
+        // Função para mostrar a posição no mapa
+        function showPosition(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+            var latlon = new L.LatLng(lat, lon);
+
+            // Atualiza o mapa com a localização do usuário
+            mymap.setView(latlon, 15);
+            L.marker(latlon).addTo(mymap); // Coloca um marcador no mapa
+        }
+
+        // Função para lidar com erros de geolocalização
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("Usuário negou a solicitação de geolocalização.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Informações de localização indisponíveis.");
+                    break;
+                case error.TIMEOUT:
+                    alert("O tempo para obter a localização expirou.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("Ocorreu um erro desconhecido.");
+                    break;
+            }
+        }
+
+        // Chama a função para pegar a localização ao carregar a página
+        getLocation();
+    </script>
+
+</body>
+</html>

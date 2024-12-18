@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
+
+/* Configurações globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #f8f4ff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #a37ddc;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2A2D54;
+    text-decoration: none; 
+}
+
+.logout{
+    color: #995577;
+    border: #995577;
+    border-radius: 12px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2A2D54;
+}
+
+.main {
+    background-color: #926B96;
+    min-height: 100vh; 
+    height: auto; 
+    padding-bottom: 16px;
+}
+
+/*Estilos da página */
+
+.content {
+    background-color: #FAFAFA;
+    margin: 32px;
+    padding: 32px;
+    border-radius: 12px;
+    display: grid; /* Usar grid para as colunas */
+    grid-template-columns: 30% 70%; /* A primeira coluna ocupa 30% e a segunda 70% */
+    gap: 32px; /* Espaço entre as colunas */
+    height: auto;
+}
+
+.details {
+    display: flex; /* Usando flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    gap: 16px; /* Espaçamento entre as divs */
+}
+
+.walk-details{
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 16px; 
+    overflow-wrap: break-word; /* Quebra as palavras longas para evitar transbordamento */
+    word-wrap: break-word; /* Compatibilidade para garantir quebra de palavras em navegadores antigos */
+    word-break: break-word; /* Quebra palavras longas em linhas */
+    background-color: #E7D7E9;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    padding: 32px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.return-button {
+    text-decoration: none; /* Remove qualquer sublinhado ou decoração do link */
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.details-buttons {
+    display: grid; /* Usa grid layout para organizar os botões */
+    grid-template-columns: 1fr; /* Divide os botões em uma única coluna */
+    gap: 16px; 
+    justify-content: center;
+}
+
+.details-button {
+    flex: 0 0 100%; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-weight: 600; 
+    border-radius: 8px; 
+    background-color: #926B96; 
+    color: white; 
+    cursor: pointer; 
+    text-align: center; 
+    text-decoration: none;
+}
+
+.details-button:hover {
+    background-color: #834866;
+}
+
+/* Adicionando o estilo para a div do mapa */
+#mapid {
+    height: 80vh; 
+    border-radius: 12px; 
+    overflow: hidden;
+    width: 98%; 
+    margin-right: 32px;
+}
+
+/* Estilos para a responsividade */
+@media (max-width: 850px) {
+    .content {
+        grid-template-columns: 1fr; /* Colapsa as colunas em uma única para telas pequenas */
+    }
+
+    #mapid {
+        height: 300px; /* Define uma altura fixa para o mapa em telas menores */
+        margin-top: 16px; /* Adiciona um espaço entre os blocos */
+    }
+}
+
+/* Estilos para a responsividade */
+@media (max-width: 500px) {
+    .site-name {
+        display: none; /* Oculta o nome do site */
+    }
+}
+
+

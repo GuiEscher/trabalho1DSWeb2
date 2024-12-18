@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
+
+/* Configurações globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #f8f4ff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #a37ddc;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2A2D54;
+    text-decoration: none; 
+}
+
+.logout{
+    color: #995577;
+    border: #995577;
+    border-radius: 12px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2A2D54;
+}
+
+.main {
+    background-color: #926B96;
+    min-height: 100vh; 
+    height: auto; 
+    padding-bottom: 16px;
+}
+
+.content {
+    background-color: #FAFAFA;
+    margin: 32px;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+/* Abas de navegação */
+.tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    font-family: 'Red Hat Text', sans-serif;
+    white-space: nowrap; /* Impede que o texto quebre de linha */
+}
+
+.tab-button {
+    background-color: #EBC1EF;
+    border: none;
+    padding: 20px 40px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-size: 20px;
+    stroke: #926B96;
+    stroke-width: 1;
+    font-weight: 500;
+    color: #2A2D54;
+    cursor: pointer;
+    font-family: 'Red Hat Text', sans-serif;
+    text-decoration: none; /* Remove qualquer sublinhado de href*/
+}
+
+.tab-button.active {
+    background-color: #E7D7E9;
+}
+
+.tab-button:hover {
+    background-color: #D4A4D8; /* Cor do hover (diferente da cor ativa) */
+}
+
+.general-button {
+    background-color: #926B96;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 500;
+    color: #FAFAFA;
+    font-size: 20px;
+    padding-left: 64px;
+    padding-right: 64px;
+    border: none; /* Remove qualquer borda */
+    border-radius: 12px;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 16px;
+    margin-left: 64px;
+    margin-right: 64px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona a sombra */
+    display: flex; /* Usando flexbox */
+    align-items: center; /* Alinha o texto verticalmente */
+    justify-content: center; /* Alinha o texto horizontalmente */
+    text-decoration: none; /* Remove qualquer sublinhado */
+}
+
+.general-button:hover {
+    background-color: #7f5481; /* Cor mais escura ao passar o mouse */
+}
+
+.selected-tab {
+    background-color: #E7D7E9;
+    padding: 32px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%; /* Ajuste para a largura total */
+}
+
+.search input {
+    padding: 12px 16px; /* Aumenta o padding para aumentar a altura */
+    flex-grow: 1; /* Faz o input crescer e ocupar o espaço restante */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: -40px; /* Ajuste o valor do espaço entre o botão e a barra */
+    color: #3f51b5;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.search input:focus {
+    border-color: #3f51b5; /* Cor do foco semelhante ao MUI */
+}
+
+.search-button:hover {
+    color: #1a237e; /* Cor ao passar o mouse, um tom mais escuro */
+}
+
+/* Tabela */
+.schedule-table {
+    width: 100%;
+    border-collapse: separate; /* Altera para separate para permitir border-radius nas células */
+    border-spacing: 0; /* Remove o espaçamento entre as células */
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #d9a7ff;
+}
+
+.schedule-table th {
+    background-color: #926B96;
+    color: #FAFAFA;
+}
+
+/* Cor de fundo para todas as linhas da tabela */
+.schedule-table tr {
+    background-color: #FAFAFA;
+}
+
+/* Alternar cor em hover para melhorar visibilidade */
+.schedule-table tr:hover {
+    background-color: #f0f0f0; /* Tom levemente mais escuro no hover */
+}
+
+/* Borda arredondada na primeira célula do cabeçalho */
+.schedule-table thead tr{
+    border-top-left-radius: 12px;
+    padding: 16px;
+}
+
+/* Borda arredondada na primeira célula do cabeçalho */
+.schedule-table thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+/* Borda arredondada na última célula do cabeçalho */
+.schedule-table thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+/* Última linha - borda inferior esquerda na primeira coluna e inferior direita na última coluna */
+.schedule-table tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.schedule-table tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+
+/* Estilo para links dentro das células da tabela */
+.row-link {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Usa a cor do texto padrão */
+    display: block; /* Faz com que o link preencha toda a célula */
+    width: 100%; /* Garante que o link ocupe toda a largura */
+    height: 100%; /* Garante que o link ocupe toda a altura */
+    padding: 10px; /* Para espaçamento interno */
+}
+
+.row-link:hover {
+    background-color: #f1f1f1; /* Destaque ao passar o mouse */
+    color: #2A2D54; /* Cor do texto ao passar o mouse */
+}
+
+
+@media screen and (max-width: 1450px) {
+    .tabs {
+        flex-wrap: wrap; /* Faz as tabs quebrarem para a próxima linha */
+        justify-content: space-between; /* Espaço entre as tabs */
+    }
+
+    .tab-button {
+        width: 100%; /* Faz cada aba ocupar a largura completa */
+        margin-bottom: 8px; /* Espaço entre as abas */
+        border-radius: 12px;
+        font-size: 16px;
+        align-content: center;
+    }
+
+    .search {
+        width: 100%; /* A barra de pesquisa ocupa a largura total */
+        margin-left: 0; /* Remove o espaçamento à esquerda */
+    }
+
+    .general-button {
+        width: 100%; /* O botão geral ocupa a largura total */
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .selected-tab {
+        border-radius: 12px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .schedule-table .disposable-column {
+        display: none; /* Oculta as colunas 4 e 5 */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .schedule-table {
+        font-size: 12px;
+    }
+    .site-name {
+        display: none; /* Oculta o nome do site */
+    }
+
+    .schedule-table .less-disposable-column {
+        display: none; /* Oculta as colunas 4 e 5 */
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .selected-tab {
+        padding: 16px;
+    }
+}
