@@ -171,6 +171,7 @@ nav {
     margin-top: 10px;
 }
 
+
 .login-card .google-login {
     display: flex;
     align-items: center;
@@ -181,6 +182,7 @@ nav {
     padding: 10px;
     font-size: 16px;
     margin-top: 10px;
+    margin-bottom: 16px;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -198,23 +200,20 @@ nav {
     margin: 0 auto;
 }
 
+.register_link{
+    text-decoration: none;
+}
+
 /* Responsividade */
 
 /* Dispositivos menores que 768px (smartphones e tablets) */
 @media (max-width: 768px) {
-    .login-image {
+    .login-image{
         display: none;
     }
 
-    .login-section {
-        flex-direction: column;
-        padding: 20px;
-    }
-
     .login-card {
-        width: 100%;
-        max-width: 400px;
-        margin: 0; 
+        margin-right: 0px;
     }
 }
 
@@ -239,3 +238,4 @@ nav {
         padding: 8px;
     }
 }
+
