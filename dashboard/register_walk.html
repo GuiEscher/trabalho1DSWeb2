@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Passeio - GoodDog Passeios</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/logo.png" alt="GoodDog Passeios">
+                <span>GoodDog Passeios</span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cadastro-section">
+        <div class="cadastro-box">
+
+            <form class="cadastro-form">
+                <h2>Cadastrar Passeio</h2>
+                <div class="cadastro-flex">
+                    <div class="cadastro-card">
+                        <h2>Informações do Cachorro</h2>
+                        <label for="cachorro_nome">Nome</label>
+                        <input type="text" id="cachorro_nome" placeholder="Nome do Cachorro" required>
+
+                        <label for="cachorro_raca">Raça</label>
+                        <input type="text" id="cachorro_raca" placeholder="Raça do Cachorro" required>
+
+                        <label for="cachorro_idade">Nome</label>
+                        <input type="text" id="cachorro_idade" placeholder="Idade do Cachorro" required>
+                        
+                        <label>Características</label>
+                        <div style="display: flex; float: left;">
+                            <div style="display:flex; background-color: red;">
+                                <input type="checkbox" id="opcao_amigavel" name="temperamento" value="amigavel">
+                                <label for="opcao_amigavel">Amigável</label>
+                            </div>
+                            <div style="display:flex; background-color: blue">
+                                <input type="checkbox" id="opcao_calmo" name="temperamento" value="calmo">
+                                <label for="opcao_calmo">Calmo</label>
+                            </div>
+                            <div style="display:flex; background-color: green">
+                                <input type="checkbox" id="opcao_agitado" name="temperamento" value="agitado">
+                                <label for="opcao_agitado">Agitado</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cadastro-card">
+                        <h2>Informações do Trajeto</h2>
+                        <label for="passeio_data">Data</label>
+                        <input type="date" id="passeio_data" placeholder="Data" required>
+
+                        <label for="passeio_hora">Horário</label>
+                        <input type="time" id="passeio_hora" placeholder="Horário" required>
+                        
+                        <label for="passeio_origem">Origem</label>
+                        <input type="text" id="passeio_origem" placeholder="Origem" required>
+                        
+                        <label for="passeio_distancia">Distância</label>
+                        <input type="text" id="passeio_distancia" placeholder="Distância" required>
+                        
+                        
+                    </div>
+                    
+                    <div class="cadastro-card">
+                        <h2>Informações do Cuidador</h2>
+                        <label for="cuidador_nome">Nome</label>
+                        <input type="text" id="cuidador_nome" placeholder="Nome do Cuidador" required>
+                        
+                        <label for="cuidador_avaliacao">Avaliação</label>
+                        <input type="text" id="cuidador_avaliacao" readonly="readonly">
+                        
+                        <label for="cuidador_valor">Valor Aproximado</label>
+                        <input type="text" id="cuidador_valor" readonly="readonly">
+                        
+                    </div>
+                </div>
+                <button type="submit">Confirmar</button>
+            </form>
+            
+        </div>
+    </section>
+</body>
+</html>
