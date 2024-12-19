@@ -10,8 +10,10 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../assets/logo.png" alt="GoodDog Passeios">
-                <span>GoodDog Passeios</span>
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo.png" alt="GoodDog Passeios">
+                    <span class="site-name">GoodDog Passeios</span>
+                </a>
             </div>
             <ul class="nav-links">
                     
@@ -40,16 +42,18 @@
                         <input type="text" id="cachorro_idade" placeholder="Idade do Cachorro" required>
                         
                         <label>Características</label>
-                        <div style="display: flex; float: left;">
-                            <div style="display:flex; background-color: red;">
+                        <div class="input-checkbox">
+                            <div>
                                 <input type="checkbox" id="opcao_amigavel" name="temperamento" value="amigavel">
                                 <label for="opcao_amigavel">Amigável</label>
                             </div>
-                            <div style="display:flex; background-color: blue">
+                            <hr>
+                            <div>
                                 <input type="checkbox" id="opcao_calmo" name="temperamento" value="calmo">
                                 <label for="opcao_calmo">Calmo</label>
                             </div>
-                            <div style="display:flex; background-color: green">
+                            <hr>
+                            <div>
                                 <input type="checkbox" id="opcao_agitado" name="temperamento" value="agitado">
                                 <label for="opcao_agitado">Agitado</label>
                             </div>
