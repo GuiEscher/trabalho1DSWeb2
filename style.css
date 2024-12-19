@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: 'Red Hat Text', sans-serif;
+    scroll-behavior: smooth; /* Faz o scroll suave */
 }
 
 /* Estilos do cabeçalho */
@@ -52,6 +53,10 @@ nav {
     color: #2A2D54;
 }
 
+.nav-links a:hover {
+    color: #a37ddc; /* Muda de cor ao passar o mouse */
+}
+
 /* Estilos da seção principal */
 .main-banner {
     position: relative;
@@ -93,6 +98,27 @@ nav {
 
 .banner-content button:hover {
     background-color: #926B96;
+}
+
+/* Seção "Sobre" */
+.about-section {
+    background-color: #a37ddc; /* Cor de fundo igual à cor do botão */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Estilos da página de login */
@@ -164,7 +190,52 @@ nav {
     margin-right: 8px;
 }
 
+/* Estilo da imagem de login */
 .login-image img {
     max-width: 400px;
     border-radius: 10px;
+    display: block; 
+    margin: 0 auto;
+}
+
+/* Responsividade */
+
+/* Dispositivos menores que 768px (smartphones e tablets) */
+@media (max-width: 768px) {
+    .login-image {
+        display: none;
+    }
+
+    .login-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0; 
+    }
+}
+
+/* Dispositivos menores que 480px (smartphones pequenos) */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
+
+    .login-card h2 {
+        font-size: 20px;
+    }
+
+    .login-card button,
+    .google-login {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .login-card input {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
