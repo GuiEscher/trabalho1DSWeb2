@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
 /* Configurações globais */
 html, body {
     height: 100%;
     margin: 0;
     font-family: 'Red Hat Text', sans-serif;
-    background-color: #926B96 ;
     scroll-behavior: smooth; /* Faz o scroll suave */
 }
 
@@ -13,12 +11,16 @@ header {
     background-color: #f8f4ff;
     padding: 10px 20px;
     border-bottom: 2px solid #a37ddc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .logo {
@@ -38,9 +40,18 @@ nav {
     text-decoration: none; 
 }
 
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2A2D54;
+}
+
+/* A navegação com os botões de Sobre e Login */
 .nav-links {
     display: flex;
     list-style: none;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
 .nav-links li {
@@ -117,13 +128,10 @@ nav {
     background-color: #926B96;
 }
 
-
-
 /* Seção "Sobre" */
 .about-section {
     background-color: #a37ddc;
     color: white;
-    min-height: 220px;
     padding: 50px 20px;
     text-align: center;
 }
@@ -148,15 +156,29 @@ nav {
     header {
         padding: 10px 15px;
     }
-    
+
+    .site-name {
+        display: none; /* Esconde o título em telas pequenas */
+    }
+
+    .nav-links {
+        display: flex; /* Garante que os botões de navegação apareçam */
+        justify-content: space-between;
+        width: 100%; /* Permite que a navegação ocupe toda a largura disponível */
+    }
+
+    .nav-links li {
+        margin-left: 10px; /* Reduz o espaço entre os itens */
+    }
+
     .nav-links a {
-        font-size: 16px;
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas menores */
     }
 
     .banner-content p {
         font-size: 20px;
     }
-    
+
     .banner-content button {
         font-size: 16px;
     }
@@ -168,8 +190,22 @@ nav {
         padding: 10px;
     }
 
+    .site-name {
+        display: none; /* Esconde o título em telas menores */
+    }
+
     .nav-links {
-        display: none; 
+        display: flex;
+        justify-content: center; /* Alinha os botões ao centro */
+        gap: 15px;
+    }
+
+    .nav-links li {
+        margin-left: 0; /* Remove o espaçamento extra entre os itens */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas menores */
     }
 
     .main-banner {
@@ -203,15 +239,23 @@ nav {
     header {
         padding: 10px;
     }
-    
+
     .logo img {
         width: 30px;
     }
-    
+
     .logo a {
         font-size: 20px;
     }
-    
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-links li {
+        margin-left: 5px; /* Ajuste no espaçamento entre os itens */
+    }
+
     .main-banner {
         height: 60vh; 
     }
@@ -238,13 +282,74 @@ nav {
     }
 }
 
+/* Estilos globais */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Red Hat Text', sans-serif;
+    scroll-behavior: smooth; /* Faz o scroll suave */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #f8f4ff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #a37ddc;
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Garante que o header fique por cima do conteúdo */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2A2D54;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2A2D54;
+}
+
+.nav-links a:hover {
+    color: #a37ddc;
+}
+
 /* Estilos da página de login */
 .login-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 256px;
+    height: calc(100vh - 60px); /* Garante que a altura seja ajustada para não cobrir o cabeçalho */
     background-color: #926B96;
+    flex-direction: column; /* Organiza os itens em coluna por padrão */
 }
 
 .login-card {
@@ -268,17 +373,17 @@ nav {
 }
 
 .login-card input {
-    width: 100%; 
+    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border-radius: 10px; 
+    border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 16px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .login-card button {
-    width: 100%; 
+    width: 100%;
     background-color: #a37ddc;
     color: white;
     border: none;
@@ -301,7 +406,6 @@ nav {
     margin-top: 10px;
     cursor: pointer;
     border-radius: 10px;
-    margin-bottom: 16px;
 }
 
 .login-card .google-login img {
@@ -313,12 +417,8 @@ nav {
 .login-image img {
     max-width: 400px;
     border-radius: 10px;
-    display: block; 
+    display: block;
     margin: 0 auto;
-}
-
-.register_link{
-    text-decoration: none;
 }
 
 /* Responsividade */
@@ -331,30 +431,28 @@ nav {
 
     .login-section {
         flex-direction: column;
-        padding: 0 20px;  
-        margin-top: 128px;
+        padding: 0 20px;
     }
 
     .login-card {
-        width: 100%;  
-        max-width: 400px;  
-        margin: 0 auto;  
-        padding: 20px;  
-        box-sizing: border-box; 
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
     }
 }
 
 /* Dispositivos menores que 480px (smartphones pequenos) */
 @media (max-width: 480px) {
     .login-section {
-        padding: 0 15px;  
-        margin-top: 64px;
+        padding: 0 15px;
     }
 
     .login-card {
         padding: 20px;
-        margin: 0 auto;  
-        max-width: 350px; 
+        margin: 0 auto;
+        max-width: 350px;
     }
 
     .login-card h2 {
@@ -372,8 +470,42 @@ nav {
         padding: 8px;
         width: 100%;
     }
+}
 
-    .site-name {
-        display: none; /* Oculta o nome do site */
+/* Estilos da página de login */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que ocupe toda a altura da tela */
+    background-color: #926B96;
+    flex-direction: column; /* Organiza os itens em coluna por padrão */
+}
+
+/* Para o modo paisagem (quando a tela é girada) */
+@media (orientation: landscape) {
+    .login-section {
+        flex-direction: row; /* Organiza os itens em linha no modo paisagem */
+        justify-content: center;
+        padding: 20px;
+        height: 100vh; /* Garante que o fundo ocupe toda a altura da tela */
+    }
+
+    .login-card {
+        width: 300px; /* Ajusta a largura do card no modo paisagem */
+        margin-right: 40px; /* Adiciona um pequeno espaçamento ao lado do card */
+        margin-top: 25%; /* Centraliza o card verticalmente */
+    }
+
+    .login-image {
+        display: block; /* Exibe a imagem novamente */
+        width: 400px; /* Ajusta o tamanho da imagem no modo paisagem */
+    }
+
+    .login-image img {
+        max-width: 100%;
+        height: auto;
     }
 }
+
+
