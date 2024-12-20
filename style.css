@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
 /* Configurações globais */
 html, body {
     height: 100%;
     margin: 0;
     font-family: 'Red Hat Text', sans-serif;
+    background-color: #926B96 ;
     scroll-behavior: smooth; /* Faz o scroll suave */
 }
 
@@ -121,6 +123,7 @@ nav {
 .about-section {
     background-color: #a37ddc;
     color: white;
+    min-height: 220px;
     padding: 50px 20px;
     text-align: center;
 }
@@ -240,7 +243,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 256px;
     background-color: #926B96;
 }
 
@@ -298,6 +301,7 @@ nav {
     margin-top: 10px;
     cursor: pointer;
     border-radius: 10px;
+    margin-bottom: 16px;
 }
 
 .login-card .google-login img {
@@ -313,6 +317,10 @@ nav {
     margin: 0 auto;
 }
 
+.register_link{
+    text-decoration: none;
+}
+
 /* Responsividade */
 
 /* Dispositivos menores que 768px (smartphones e tablets) */
@@ -324,6 +332,7 @@ nav {
     .login-section {
         flex-direction: column;
         padding: 0 20px;  
+        margin-top: 128px;
     }
 
     .login-card {
@@ -339,6 +348,7 @@ nav {
 @media (max-width: 480px) {
     .login-section {
         padding: 0 15px;  
+        margin-top: 64px;
     }
 
     .login-card {
@@ -361,5 +371,9 @@ nav {
         font-size: 14px;
         padding: 8px;
         width: 100%;
+    }
+
+    .site-name {
+        display: none; /* Oculta o nome do site */
     }
 }

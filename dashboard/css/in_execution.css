@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: 'Red Hat Text', sans-serif;
+    background-color: #926B96 ;
 }
 
 /* Estilos do cabeçalho */
@@ -58,9 +59,11 @@ nav {
     color: #2A2D54;
 }
 
+.nav-links a:hover {
+    color: #a37ddc; 
+}
+
 .main {
-    background-color: #926B96;
-    min-height: 100vh; 
     height: auto; 
     padding-bottom: 16px;
 }
@@ -69,7 +72,7 @@ nav {
 
 .content {
     background-color: #FAFAFA;
-    margin: 32px;
+    margin: 32px 32px 0 32px; 
     padding: 32px;
     border-radius: 12px;
     display: grid; /* Usar grid para as colunas */
